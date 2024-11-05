@@ -19,7 +19,7 @@ form.addEventListener('input', savetoLocalStorage);
 form.addEventListener('submit', checkFormInputs);
 
 function savetoLocalStorage(e) {
-    formData[e.target.name] = e.target.value;
+    formData[e.target.name] = e.target.value.trim();
 
     localStorage.setItem(localKey, JSON.stringify(formData));
 };
